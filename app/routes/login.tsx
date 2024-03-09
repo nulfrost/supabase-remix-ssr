@@ -1,4 +1,4 @@
-import { ActionFunctionArgs, redirect } from "@remix-run/node";
+import { ActionFunctionArgs, redirect } from "@vercel/remix";
 import { Form } from "@remix-run/react";
 import { createClient } from "~/supabase/supabase.server";
 
@@ -11,7 +11,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const { data } = await supabase.auth.signInWithOAuth({
     provider: intent,
     options: {
-      redirectTo: "http://localhost:5173/auth/callback",
+      redirectTo: process.env.REDIRECT_URL,
     },
   });
 

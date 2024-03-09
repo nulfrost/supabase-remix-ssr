@@ -1,4 +1,4 @@
-import { type ActionFunctionArgs, redirect } from "@remix-run/node";
+import { type ActionFunctionArgs, redirect } from "@vercel/remix";
 import { createClient } from "~/supabase/supabase.server";
 
 export async function action({ request }: ActionFunctionArgs) {

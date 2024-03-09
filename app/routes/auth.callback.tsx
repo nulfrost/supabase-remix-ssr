@@ -1,4 +1,4 @@
-import { redirect, type LoaderFunctionArgs } from "@remix-run/node";
+import { redirect, type LoaderFunctionArgs } from "@vercel/remix";
 import { createClient } from "~/supabase/supabase.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
